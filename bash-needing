@@ -1,0 +1,19 @@
+(克隆项目到本地之后)
+1. 在自己本地的 MySQL server 中新建数据库：
+    create database video;
+
+2. 通过 manage.py 迁移数据库表模型
+    python manage.py migrate auth
+    python manage.py makemigrations users
+    python manage.py migrate users
+    python manage.py migrate --fake admin
+    python manage.py migrate
+    python manage.py makemigrations video
+    python manage.py migrate video
+    python manage.py makemigrations comment
+    python manage.py migrate comment
+    python manage.py makemigrations myadmin
+    python manage.py migrate myadmin
+
+3. 如何运行本后端服务?
+    python manage.py runserver
